@@ -132,5 +132,5 @@ Exit game (after winning/losing)	Esc
 ## 📄 License
 
 This project is licensed under the MIT License.  
-See the [LICENSE]([LICENSE](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/LICANSE)) file for more details.
+See the [LICENSE](LICENSE) file for more details.
 
