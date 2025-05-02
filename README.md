@@ -1,5 +1,7 @@
-Blackjack in Assembly (TASM 16-bit)
-Project Overview
+# Blackjack in Assembly (TASM 16-bit)
+## Final project for 10th grade computer science class.
+Author: Eyal Raifler
+#### Project Overview
 This is a simple Blackjack game developed in Assembly language (TASM 16-bit), designed to run in DosBox.
 It was built as part of a final project at school, with the goal of practicing low-level programming and better understanding computer architecture.
 
@@ -11,7 +13,7 @@ Assembler: Turbo Assembler (TASM)
 
 Runtime environment: DosBox
 
-How to Play
+#### How to Play
 The player is dealt two cards, and the dealer is dealt one open card and one hidden card.
 
 Player Options:
@@ -47,7 +49,7 @@ After winning/losing screen, replay	Space
 Exit game (after winning/losing)	Esc
 
 
-Procedures Table:
+#### Procedures Table:
 | Procedure Name                                                                                                                            | Purpose                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
 | `PRINT_PLAYER_CARDS`                                                                                                                      | Print the player's chosen card.            |
@@ -75,11 +77,7 @@ Procedures Table:
 
 
 
-
-
-
-
-Variables Table:
+#### Variables Table:
 
 | Variable Name                                                                                          | Purpose                                         |
 | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
