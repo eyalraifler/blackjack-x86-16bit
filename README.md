@@ -1,56 +1,106 @@
-# Blackjack Fantasy - Assembly Tasm x86 16bit
-Author: Eyal Raifler
-📖 Overview
-This project is a full-featured Blackjack game, written entirely in x86 TASM 16bit Assembly language.
-It includes graphical card representations, animations (such as "HIT" and "WIN" GIFs), and handles complete game logic including player actions, dealer behavior, and blackjack rules.
+Blackjack in Assembly (TASM 16-bit)
+Project Overview
+This is a simple Blackjack game developed in Assembly language (TASM 16-bit), designed to run in DosBox.
+It was built as part of a final project at school, with the goal of practicing low-level programming and better understanding computer architecture.
 
-The game features:
+Main file: base.asm
 
-Title screen and instructions
+Development environment: VS Code, Notepad++
 
-Full 52-card deck with visual rendering
+Assembler: Turbo Assembler (TASM)
 
-Player vs. dealer flow with real Blackjack rules
+Runtime environment: DosBox
 
-Blackjack bonuses (Blackjack = 2 points, regular win = 1 point)
+How to Play
+The player is dealt two cards, and the dealer is dealt one open card and one hidden card.
 
-Dynamic ace handling (Ace can count as 1 or 11)
+Player Options:
 
-Randomized shuffling using clock-based pseudo-randomness
+Hit (H): Take another card.
 
-Victory and defeat animations
+Stand (S): End turn and let the dealer play.
 
-Modular and well-structured code
+Winning Conditions:
 
-🎮 How to Play
-Run the game.
+Blackjack: Two cards totaling 21 immediately wins the round (2 points).
 
-press enter to go to instructions screen.
+Closer to 21 than dealer without busting wins 1 point.
 
-Press space on the title screen or instructions screen to start.
+The first to 5 victories (player or dealer) wins the game.
 
-Follow the on-screen instructions:
+Card Values:
 
-Press H to Hit (draw another card).
+Number cards (2-10) = face value.
 
-Press S to Stand (end your turn).
+Face cards (J, Q, K) = 10 points.
 
-Try to get as close as possible to 21 without exceeding it.
+Ace (A) = 1 or 11 points depending on the situation.
 
-Dealer will automatically play after you stand.
+Controls
+Action	Key
+From start screen to instructions	Enter
+From instructions to game	Space
+Hit (take card)	H or h
+Stand (end turn)	S or s
+After winning/losing screen, back to start	Enter
+After winning/losing screen, replay	Space
+Exit game (after winning/losing)	Esc
 
-Winning rules:
 
-21 with 2 cards ("Blackjack") gives extra points.
+Procedures Table:
+| Procedure Name                                                                                                                            | Purpose                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `PRINT_PLAYER_CARDS`                                                                                                                      | Print the player's chosen card.            |
+| `PRINT_DEALER_CARDS`                                                                                                                      | Print the dealer's chosen card.            |
+| `WAIT075SEC`                                                                                                                              | Introduce a short delay.                   |
+| `MAKE_RANDOM_NUMBER`                                                                                                                      | Generate a random number (1–13).           |
+| `EVALUATE_PLAYER_HAND`                                                                                                                    | Sum player's hand and evaluate.            |
+| `EVALUATE_DEALER_HAND`                                                                                                                    | Sum dealer's hand and evaluate.            |
+| `print_gif`                                                                                                                               | Helper for printing gifs.                  |
+| `hit_gif`, `won_gif`, `lost_gif`, `tie_gif`                                                                                               | Display gifs for game events.              |
+| `Print_Line_On_Screen`                                                                                                                    | Print a line for screens.                  |
+| `INSTRUCTIONS_SCREEN`, `Title_Screen`, `Win_Screen`, `Lost_Screen`, `Main_Game_Print`                                                     | Display different screens.                 |
+| `PRINT_LINE_ON_SCREEN_FOR_CARD`                                                                                                           | Print a card line on screen.               |
+| `DRAW_PLAYER_POINT`, `DRAW_DEALER_POINT`                                                                                                  | Draw number of round wins.                 |
+| `DRAW_PLAYER_TENS_HAND_VALUE`, `DRAW_PLAYER_UNITS_HAND_VALUE`                                                                             | Print tens and units digits of hand value. |
+| `DRAW_PLAYER_WON_ROUND_SENTENCE`, `DRAW_PLAYER_WON_ROUND_WITH_BLACKJACK_SENTENCE`, `DRAW_PLAYER_LOST_ROUND_SENTENCE`, `DRAW_TIE_SENTENCE` | Print winning/losing/tie messages.         |
+| `wait_for_key`                                                                                                                            | Wait for user input (Enter/Space).         |
+| `DRAW_HIT_OR_STAND_SENTENCE`                                                                                                              | Prompt player for action.                  |
+| `Reset_Everything`                                                                                                                        | Reset all game variables.                  |
+| `RESET_AFTER_ROUND`                                                                                                                       | Reset round-specific variables.            |
+| `PLAYER_WON_ROUND_WITH_BLACKJACK`, `PLAYER_WON_ROUND`, `TIE_IN_ROUND`, `DEALER_WON_ROUND`                                                 | Handle different round outcomes.           |
+| `OVERALL_PLAYER_CARD`, `OVERALL_DEALER_CARD`                                                                                              | Card dealing and evaluation.               |
+| `WAIT_FOR_ENTER`                                                                                                                          | Wait for Enter key.                        |
 
-Regular wins score points as well.
 
-🛠 Technical Details
-Language: Assembly (TASM syntax)
 
-Platform: DOS/Emulator (e.g., DOSBox) or x86 Real Mode environment
 
-Graphics: Text-mode graphics (ASCII-based rendering)
+
+
+
+
+Variables Table:
+
+| Variable Name                                                                                          | Purpose                                         |
+| ------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| `main_game`, `lost_screen`, `win_screen`, `title_screen`, `instr_screen`                               | Arrays that store different screen layouts.     |
+| `gif variables`                                                                                        | Arrays for gifs (hit/win/loss/tie).             |
+| `card variables`                                                                                       | Arrays for displaying cards.                    |
+| `screen_number`, `num_of_row`                                                                          | Helpers for managing screen rows.               |
+| `TEXT_PLAYER_POINTS`, `TEXT_DEALER_POINTS`                                                             | Player and dealer victory counters for display. |
+| `PLAYER_POINTS`, `DEALER_POINTS`                                                                       | Actual player and dealer points.                |
+| `clear_sentence`, `clear_the_hit_or_stand`                                                             | Empty sentences to overwrite old text.          |
+| `player_chooses_hit_or_stand`                                                                          | Prompt asking player to hit or stand.           |
+| `won_round_sentence`, `won_round_with_blackjack_sentence`, `lost_round_sentence`, `tie_round_sentence` | Different outcome sentences.                    |
+| `Clock`                                                                                                | Stores time.                                    |
+| `Counter`, `counter_of_card`                                                                           | Counts card usage frequency.                    |
+| `player_card_counter`, `dealer_card_counter`                                                           | Number of cards player/dealer has.              |
+| `player_hand_value`, `dealer_hand_value`                                                               | Value of player/dealer hands.                   |
+| `text_player_tens_hand_value`, `text_player_units_hand_value`                                          | Tens and units of hand value for player.        |
+| `was_game_over`, `was_1_round_over`                                                                    | Game state flags.                               |
+| `player_ace`, `dealer_ace`                                                                             | Number of aces for each hand.                   |
+| `blackjack_color_sentence`                                                                             | Color of the blackjack message.                 |
+| `collum1`                                                                                              | Column position for printing text.              |
 
 
 
