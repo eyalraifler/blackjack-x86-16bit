@@ -1,8 +1,8 @@
-# Blackjack in Assembly (TASM 16-bit)
+# Blackjack in Assembly (8086 TASM 16-bit)
 ## Final project for 10th grade computer science class.
 Author: Eyal Raifler
 #### Project Overview
-This is a simple Blackjack game developed in Assembly language (TASM 16-bit), designed to run in DosBox.
+This is a simple Blackjack game developed in Assembly language (8086 TASM 16-bit), designed to run in DosBox.
 It was built as part of a final project at school, with the goal of practicing low-level programming and better understanding computer architecture.
 
 Main file: base.asm
@@ -49,6 +49,14 @@ After winning/losing screen, replay	Space
 Exit game (after winning/losing)	Esc  
 
 
+Title screen
+
+
+
+
+
+
+
 #### Procedures Table:
 | Procedure Name                                                                                                                            | Purpose                                    |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
@@ -73,6 +81,9 @@ Exit game (after winning/losing)	Esc
 | `PLAYER_WON_ROUND_WITH_BLACKJACK`, `PLAYER_WON_ROUND`, `TIE_IN_ROUND`, `DEALER_WON_ROUND`                                                 | Handle different round outcomes.           |
 | `OVERALL_PLAYER_CARD`, `OVERALL_DEALER_CARD`                                                                                              | Card dealing and evaluation.               |
 | `WAIT_FOR_ENTER`                                                                                                                          | Wait for Enter key.                        |
+
+
+
 
 
 
