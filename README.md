@@ -52,7 +52,7 @@ Platform: DOS/Emulator (e.g., DOSBox) or x86 Real Mode environment
 Graphics: Text-mode graphics (ASCII-based rendering)
 
 Blackjack Fantasy - Game Flowchart:
-┌─────────────────────────────┐
+┌─────────────────────────────┐/r/n
 │           Start             │
 └─────────────┬───────────────┘
               │
