@@ -49,7 +49,23 @@ After winning/losing screen, replay	Space
 Exit game (after winning/losing)	Esc  
 
 
-Title screen
+
+## 📸 Screenshots
+
+### Title Screen
+![Title Screen](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/Screenshots/Title_screen.png)
+
+### Instructions Screen
+![Instructions Screen](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/Screenshots/Instructions_screen.png)
+
+### Main Game Screen
+![Main Game Screen](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/Screenshots/Main_game_screen.png)
+
+### Win Screen
+![Win Screen](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/Screenshots/Win_screen.png)
+
+### Lose Screen
+![Lose Screen](https://github.com/Eyal261/blackjack-x86-16bit/raw/main/Screenshots/Lose_screen.png)
 
 
 
