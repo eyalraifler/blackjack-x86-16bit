@@ -1,5 +1,5 @@
 # Blackjack in Assembly (8086 TASM 16-bit)
-## Final project for 10th grade computer science class.
+## Final project for 10th grade computer science class
 Author: Eyal Raifler
 #### Project Overview
 This is a simple Blackjack game developed in Assembly language (8086 TASM 16-bit), designed to run in DosBox.
@@ -128,4 +128,9 @@ Exit game (after winning/losing)	Esc
 | `collum1`                                                                                              | Column position for printing text.              |
 
 
+
+## 📄 License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for more details.
 
