@@ -134,7 +134,3 @@ Exit game (after winning/losing)	Esc
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for more details.
 
-## Inspiration
-
-Parts of the design and gameplay were inspired by [https://github.com/lionthroat/cs271-project/blob/master/README.md?plain=1](https://github.com/lionthroat/cs271-project/tree/master)
-
