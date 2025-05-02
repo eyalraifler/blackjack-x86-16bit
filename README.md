@@ -22,7 +22,7 @@ Hit (H): Take another card.
 
 Stand (S): End turn and let the dealer play.
 
-Winning Conditions:
+##### Winning Conditions:
 
 Blackjack: Two cards totaling 21 immediately wins the round (2 points).
 
@@ -30,7 +30,7 @@ Closer to 21 than dealer without busting wins 1 point.
 
 The first to 5 victories (player or dealer) wins the game.
 
-Card Values:
+##### Card Values:
 
 Number cards (2-10) = face value.
 
@@ -38,15 +38,15 @@ Face cards (J, Q, K) = 10 points.
 
 Ace (A) = 1 or 11 points depending on the situation.
 
-Controls
-Action	Key
-From start screen to instructions	Enter
-From instructions to game	Space
-Hit (take card)	H or h
-Stand (end turn)	S or s
-After winning/losing screen, back to start	Enter
-After winning/losing screen, replay	Space
-Exit game (after winning/losing)	Esc
+##### Controls
+Action	Key  
+From start screen to instructions	Enter  
+From instructions to game	Space  
+Hit (take card)	H or h  
+Stand (end turn)	S or s  
+After winning/losing screen, back to start	Enter  
+After winning/losing screen, replay	Space  
+Exit game (after winning/losing)	Esc  
 
 
 #### Procedures Table:
