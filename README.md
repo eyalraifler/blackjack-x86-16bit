@@ -143,7 +143,7 @@ VSCode DOSBox v0.1.8
 Make sure your files are located under the TASM directory.
 Then, in VSCode, right-click the .asm file and select "Run ASM code".
 
-DosBox should open automatically inside VSCode, and your program will run.
+DosBox should be opened automatically inside VSCode, and your program will be run.
 
 I know Writing and executing Assembly code can be very challenging, especially in the beginning.
 If my explanation is unclear, I encourage you to check out other online resources or tutorials for additional guidance.
